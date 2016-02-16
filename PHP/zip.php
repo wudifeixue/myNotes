@@ -27,7 +27,7 @@ a:hover {
 </head>
 
 <body>
-  <form name="myform" method="post" action="yasuo.php">
+  <form name="myform" method="post" action="zip.php">
 <font color="#FF0000">在线压缩ZIP文件程序</font><br>
 
 <div style="color:#FF9900">
