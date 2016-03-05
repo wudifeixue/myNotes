@@ -5,10 +5,11 @@ Then this simple Python web server will be perfect for you. It can quickly share
 or test a simple HTML site. 
 
 #### Before you start, you will need Python 2, or Python 3 installed  
-If you do not have Python installed, Download Python [HERE](https://www.python.org/downloads/)
+If you do not have Python installed, Download Python [HERE](https://www.python.org/downloads/)  
 
 #### Once you have Python installed and ready to go, follow the following instructions
 ###### Setup on python 2 or python 3 will be a bit different  
+
 * **On Python 2**  
  * Mac or Linux  
  Open terminal  
@@ -19,9 +20,15 @@ If you do not have Python installed, Download Python [HERE](https://www.python.o
  ```
 then simply type:  
  ```
- python -m SimpleHTTPServer 8080
+ python -m SimpleHTTPServer 8080  
  ```
 That's it, I have setup a Simple HTTP web server on port 8080.  
+If you want to let this webserver work outside of local network.  
+```
+python -m SimpleHTTPServer 80 --bind 0.0.0.0  
+```
+Would be a simple solution.  
+
  * On Windows  
  Open command prompt. (cmd.exe)  
  In windows URL to python probably will need to be specified.  
