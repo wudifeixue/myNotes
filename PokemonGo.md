@@ -4,29 +4,13 @@
 去https://www.python.org/downloads/ 选择适合你的系统的Python  
 然后去[下载](https://github.com/AHAAAAAAA/PokemonGo-Map/archive/master.zip) PokemonGo-Map最新安装包  
 
-群共享我也会提供，但是不见得最新（开源项目一直在更新）   
-解压文件  
-用记事本（notepad)或者notepad++等编辑器打开credentials.json  
-**更改API成新的Google Maps JavaScript API**  
+解压后Windows用户可以直接进入Easy Setup文件夹  
+双击里面的setup.bat即可安装pip（Python的库管理器）以及地图服务器  
+安装成功后即可开启服务器
 
-##credentials.json源码：  
-{  
-	"ptc_client_secret"	: "w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR",  
-	"android_id"		: "9774d56d682e549c",  
-	"service"			:   "audience:server:client_id:848232511240-7so421jotr2609rmqakceuu1luuq0ptb.apps.googleusercontent.com",  
-	"client_sig"		: "321187995bc7cdc2b5fc91b11a96e2baa8602c62",  
-	"gmaps_key"			: "AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw"  
-}  
-  
-**在Credentials.json**里面替换掉**gmaps_key**后面的**AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw**  
-成为你的[Google Maps JavaScript API](https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true)  
-如果你没有的话就替换成我的API（如果太多人用可能会超流量）：__AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw__  
-
-##---API申请教程预留位置---  
-[点击申请你自己的Google Maps API](https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true "Google Maps JavaScript API")  
-
-Windows用户可以直接进入Easy Setup文件夹  
-双击里面的setup.bat即可安装地图  
+##手动开启服务器的命令如下  
+python example.py -a ptc使用TrainerClub账号 -u 用户名 -p 密码 -l "地址或经度纬度" -st 10 -ds -dg  
+替换-a ptc成为-a google是使用Google账号  
 
 开启服务器的简单代码写成run.bat  
 run.bat代码如下  
@@ -43,10 +27,7 @@ python example.py -a ptc -u dyxgame -p 123456 -l "Calgary, AB" -st 10 -dp -dg
 [http://localhost:5000](http://localhost:5000)  
 即可看到你输入的地址附近的所有精灵，补给站和道馆了  
 
-##手动开启服务器的命令如下  
-python example.py -a ptc使用TrainerClub账号 -u 用户名 -p 密码 -l "地址或经度纬度" -st 10 -ds -dg  
-替换-a ptc成为-a google是使用Google账号  
-
+-------------------------------------------
 #高级命令详细应用与解释
 ###下面是一段英文的原版解释和使用方法，我讲一一作出中文对应的解释和使用  
 ```shell
@@ -75,6 +56,27 @@ example.py: error: argument -d/--debug: ignored explicit argument 's'
 * -c是坐标转换中国
 * -m是mock数据
 * -d是debug模式
+
+
+-------------------------------------------
+##如何更改API成新的Google Maps JavaScript API  
+用记事本（notepad)或者notepad++等编辑器打开credentials.json  
+###credentials.json源码：  
+{  
+	"ptc_client_secret"	: "w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR",  
+	"android_id"		: "9774d56d682e549c",  
+	"service"			:   "audience:server:client_id:848232511240-7so421jotr2609rmqakceuu1luuq0ptb.apps.googleusercontent.com",  
+	"client_sig"		: "321187995bc7cdc2b5fc91b11a96e2baa8602c62",  
+	"gmaps_key"			: "AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw"  
+}  
+  
+**在Credentials.json**里面替换掉**gmaps_key**后面的**AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw**  
+成为你的[Google Maps JavaScript API](https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true)  
+如果你没有的话就替换成我的API（如果太多人用可能会超流量）：__AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw__  
+
+##---API申请教程预留位置---  
+[点击申请你自己的Google Maps API](https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true "Google Maps JavaScript API")  
+
 
 
 
