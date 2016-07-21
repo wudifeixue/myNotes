@@ -1,11 +1,10 @@
 #安装并开启PokemonGo实时地图方法  
 
-首先安装Python 2.7  
+首先安装**Python 2.7** 是的只支持2.7  
 去https://www.python.org/downloads/ 选择适合你的系统的Python  
-然后  
-下载最新安装包  
-https://github.com/AHAAAAAAA/PokemonGo-Map  
-群共享我也会提供，但是不见得最新（开源项目一直更新）   
+然后去https://github.com/AHAAAAAAA/PokemonGo-Map/archive/master.zip下载最新安装包  
+
+群共享我也会提供，但是不见得最新（开源项目一直在更新）   
 解压文件  
 用记事本（notepad)或者notepad++等编辑器打开credentials.json  
 更改API成新的Google Maps JavaScript API  
@@ -21,24 +20,34 @@ AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw
 	"gmaps_key"			: "AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw"
 }
 
----API教程预留位置---  
-https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true  
+---API申请教程预留位置--- 
+
+[点击申请你自己的Google Maps API](https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true "Google Maps JavaScript API")
 
 Windows用户可以直接进入Easy Setup文件夹  
 双击里面的setup.bat即可安装地图  
 
 开启服务器只需要双击我提供的run.bat即可  
+run.bat代码如下
+
+```bat
+python example.py -a ptc -u dyxgame -p 123456 -l "Calgary, AB" -st 10 -dp -dg
+```
 进入以后输入你需要的地址，账号已经包含在内  
-如何申请账号请看---  
-当服务器已经成功开启，你可以打开浏览器访问  
+##申请自己账号地址：  
+https://club.pokemon.com/us/pokemon-trainer-club/sign-up/  
+
+##当服务器已经成功开启，你可以打开浏览器访问：  
 http://localhost:5000  
 即可看到你输入的地址附近的所有精灵，补给站和道馆了  
 
-手动开启服务器的命令如下  
-python example.py -a ptc -u 用户名 -p 密码 -l "地址或经度纬度" -st 10 -ds -dg  
+##手动开启服务器的命令如下  
+python example.py -a ptc使用TrainerClub账号 -u 用户名 -p 密码 -l "地址或经度纬度" -st 10 -ds -dg  
+-a google是使用Google账号  
 
-解释python example.py是开启程序，-a -ptc是登陆方式，这里采用的Pokemon Club的账号，也可以换成---来使用Google账号登陆  
--u是用户 -p是密码 “地址” -st 10?? -ds是显示补给点 -dg是显示道馆  
+###解释
+python example.py是开启程序，-a -ptc是登陆方式，这里采用的Pokemon Club的账号，也可以换成---来使用Google账号登陆  
+-u是用户 -p是密码 “地址” -st 10是走附近多大距离 -ds是显示补给点 -dg是显示道馆  
 
 
 #These are the the English original guide from Reddit, I am using them for my Chinese one right now as a reference.  
