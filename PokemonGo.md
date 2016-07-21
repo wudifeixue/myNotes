@@ -19,6 +19,7 @@ AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw
 	"client_sig"		: "321187995bc7cdc2b5fc91b11a96e2baa8602c62",
 	"gmaps_key"			: "AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw"
 }
+在Credentials.json里面替换掉gmaps_key后面的AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw  
 
 ---API申请教程预留位置--- 
 
@@ -27,15 +28,16 @@ AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw
 Windows用户可以直接进入Easy Setup文件夹  
 双击里面的setup.bat即可安装地图  
 
-开启服务器只需要双击我提供的run.bat即可  
-run.bat代码如下
-
+开启服务器的简单代码写成run.bat  
+run.bat代码如下  
 ```bat
 python example.py -a ptc -u dyxgame -p 123456 -l "Calgary, AB" -st 10 -dp -dg
 ```
-进入以后输入你需要的地址，账号已经包含在内  
+进入以后输入你需要的地址，上面账号已经包含在内  
+
 ##申请自己账号地址：  
-https://club.pokemon.com/us/pokemon-trainer-club/sign-up/  
+[Pokemon Trainer Club账号申请](https://club.pokemon.com/us/pokemon-trainer-club/sign-up/)  
+[Google账号申请](https://accounts.google.com)
 
 ##当服务器已经成功开启，你可以打开浏览器访问：  
 http://localhost:5000  
@@ -43,11 +45,24 @@ http://localhost:5000
 
 ##手动开启服务器的命令如下  
 python example.py -a ptc使用TrainerClub账号 -u 用户名 -p 密码 -l "地址或经度纬度" -st 10 -ds -dg  
--a google是使用Google账号  
+替换-a ptc成为-a google是使用Google账号  
 
-###解释
-python example.py是开启程序，-a -ptc是登陆方式，这里采用的Pokemon Club的账号，也可以换成---来使用Google账号登陆  
--u是用户 -p是密码 “地址” -st 10是走附近多大距离 -ds是显示补给点 -dg是显示道馆  
+高级命令详细应用与解释
+```
+$ python example.py -a ptc -u * -p * -l "21.288476, -157.709944" -dg -ds -st 11
+usage: example.py [-h] [-a AUTH_SERVICE] -u USERNAME [-p PASSWORD] -l
+                    LOCATION -st STEP_LIMIT [-i IGNORE | -o ONLY]
+                    [-ar AUTO_REFRESH] [-dp] [-dl] [-dg] [-H HOST] [-P PORT]
+                    [-L LOCALE] [-c] [-d] [-m] [-k GMAPS_KEY]
+example.py: error: argument -d/--debug: ignored explicit argument 's'
+```
+###高级命令解释
+python example.py是开启程序，-a是登陆方式，这里采用的-a ptc是Pokemon Club的账号，也可以换成-a google来使用Google账号登陆  
+-u是用户 -p是密码 “地址” -st 10是范围（越大刷新越慢）-i忽略（可以输入名字或者编号） -o是只显示列表（输入例子-i 13,36,weedle,等）   -ar是自动刷新浏览器（单位秒）-ds是显示补给点 -dg是显示道馆 -H 是HOST IP地址外网用0.0.0.0即可，也可以针对域名绑定，例如wiki.wa2.info
+-P是端口绑定好域名即可多个80 -L是本地语言，现在有四个语言可以在LOCALE文件夹里面找 -c是坐标转换中国 -m是mock数据 -d是debug模式
+
+
+
 
 
 #These are the the English original guide from Reddit, I am using them for my Chinese one right now as a reference.  
