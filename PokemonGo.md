@@ -2,7 +2,7 @@
 
 首先安装**Python 2.7** 是的只支持2.7  
 去https://www.python.org/downloads/ 选择适合你的系统的Python  
-然后去https://github.com/AHAAAAAAA/PokemonGo-Map/archive/master.zip下载最新安装包  
+然后去[下载](https://github.com/AHAAAAAAA/PokemonGo-Map/archive/master.zip) PokemonGo-Map最新安装包  
 
 群共享我也会提供，但是不见得最新（开源项目一直在更新）   
 解压文件  
