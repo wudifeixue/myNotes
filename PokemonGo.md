@@ -10,7 +10,20 @@ https://github.com/AHAAAAAAA/PokemonGo-Map
 用记事本（notepad)或者notepad++等编辑器打开credentials.json  
 更改API成新的Google Maps JavaScript API  
 如果你没有的话就替换成我的API：  
+AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw  
+
+源代码类似
+{
+	"ptc_client_secret"	: "w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR",
+	"android_id"		: "9774d56d682e549c",
+	"service"			: "audience:server:client_id:848232511240-7so421jotr2609rmqakceuu1luuq0ptb.apps.googleusercontent.com",
+	"client_sig"		: "321187995bc7cdc2b5fc91b11a96e2baa8602c62",
+	"gmaps_key"			: "AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw"
+}
+
 ---API教程预留位置---  
+https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true  
+
 Windows用户可以直接进入Easy Setup文件夹  
 双击里面的setup.bat即可安装地图  
 
@@ -23,6 +36,7 @@ http://localhost:5000
 
 手动开启服务器的命令如下  
 python example.py -a ptc -u 用户名 -p 密码 -l "地址或经度纬度" -st 10 -ds -dg  
+
 解释python example.py是开启程序，-a -ptc是登陆方式，这里采用的Pokemon Club的账号，也可以换成---来使用Google账号登陆  
 -u是用户 -p是密码 “地址” -st 10?? -ds是显示补给点 -dg是显示道馆  
 
