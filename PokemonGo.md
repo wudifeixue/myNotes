@@ -7,11 +7,9 @@
 群共享我也会提供，但是不见得最新（开源项目一直在更新）   
 解压文件  
 用记事本（notepad)或者notepad++等编辑器打开credentials.json  
-更改API成新的Google Maps JavaScript API  
-如果你没有的话就替换成我的API：  
-AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw  
+**更改API成新的Google Maps JavaScript API**  
 
-源代码类似  
+##credentials.json源码：  
 {  
 	"ptc_client_secret"	: "w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR",  
 	"android_id"		: "9774d56d682e549c",  
@@ -20,10 +18,11 @@ AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw
 	"gmaps_key"			: "AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw"  
 }  
   
-在Credentials.json里面替换掉gmaps_key后面的AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw  
+**在Credentials.json**里面替换掉**gmaps_key**后面的**AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw**  
+成为你的[Google Maps JavaScript API](https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true)  
+如果你没有的话就替换成我的API（如果太多人用可能会超流量）：__AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw__  
 
 ##---API申请教程预留位置---  
-
 [点击申请你自己的Google Maps API](https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true "Google Maps JavaScript API")  
 
 Windows用户可以直接进入Easy Setup文件夹  
@@ -48,8 +47,9 @@ python example.py -a ptc -u dyxgame -p 123456 -l "Calgary, AB" -st 10 -dp -dg
 python example.py -a ptc使用TrainerClub账号 -u 用户名 -p 密码 -l "地址或经度纬度" -st 10 -ds -dg  
 替换-a ptc成为-a google是使用Google账号  
 
-高级命令详细应用与解释
-```
+#高级命令详细应用与解释
+###下面是一段英文的原版解释和使用方法，我讲一一作出中文对应的解释和使用  
+```shell
 $ python example.py -a ptc -u * -p * -l "21.288476, -157.709944" -dg -ds -st 11
 usage: example.py [-h] [-a AUTH_SERVICE] -u USERNAME [-p PASSWORD] -l
                     LOCATION -st STEP_LIMIT [-i IGNORE | -o ONLY]
@@ -57,8 +57,8 @@ usage: example.py [-h] [-a AUTH_SERVICE] -u USERNAME [-p PASSWORD] -l
                     [-L LOCALE] [-c] [-d] [-m] [-k GMAPS_KEY]
 example.py: error: argument -d/--debug: ignored explicit argument 's'
 ```
-#高级命令详细解释
-* python example.py是开启程序
+##详细参数设置  
+**python example.py的后缀参数说明**  
 * -a是登陆方式 这里采用的-a ptc是Pokemon Club的账号，也可以换成-a google来使用Google账号登陆
 * -u是用户名 
 * -p是密码
