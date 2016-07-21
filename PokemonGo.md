@@ -11,19 +11,20 @@
 如果你没有的话就替换成我的API：  
 AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw  
 
-源代码类似
-{
-	"ptc_client_secret"	: "w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR",
-	"android_id"		: "9774d56d682e549c",
-	"service"			: "audience:server:client_id:848232511240-7so421jotr2609rmqakceuu1luuq0ptb.apps.googleusercontent.com",
-	"client_sig"		: "321187995bc7cdc2b5fc91b11a96e2baa8602c62",
-	"gmaps_key"			: "AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw"
-}
+源代码类似  
+{  
+	"ptc_client_secret"	: "w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR",  
+	"android_id"		: "9774d56d682e549c",  
+	"service"			:   "audience:server:client_id:848232511240-7so421jotr2609rmqakceuu1luuq0ptb.apps.googleusercontent.com",  
+	"client_sig"		: "321187995bc7cdc2b5fc91b11a96e2baa8602c62",  
+	"gmaps_key"			: "AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw"  
+}  
+  
 在Credentials.json里面替换掉gmaps_key后面的AIzaSyCsWm4TULH3DL6iatLcgfowKGwTFrPlEtw  
 
----API申请教程预留位置--- 
+##---API申请教程预留位置---  
 
-[点击申请你自己的Google Maps API](https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true "Google Maps JavaScript API")
+[点击申请你自己的Google Maps API](https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true "Google Maps JavaScript API")  
 
 Windows用户可以直接进入Easy Setup文件夹  
 双击里面的setup.bat即可安装地图  
@@ -40,7 +41,7 @@ python example.py -a ptc -u dyxgame -p 123456 -l "Calgary, AB" -st 10 -dp -dg
 [Google账号申请](https://accounts.google.com)
 
 ##当服务器已经成功开启，你可以打开浏览器访问：  
-http://localhost:5000  
+[http://localhost:5000](http://localhost:5000)  
 即可看到你输入的地址附近的所有精灵，补给站和道馆了  
 
 ##手动开启服务器的命令如下  
@@ -56,12 +57,24 @@ usage: example.py [-h] [-a AUTH_SERVICE] -u USERNAME [-p PASSWORD] -l
                     [-L LOCALE] [-c] [-d] [-m] [-k GMAPS_KEY]
 example.py: error: argument -d/--debug: ignored explicit argument 's'
 ```
-###高级命令解释
-python example.py是开启程序，-a是登陆方式，这里采用的-a ptc是Pokemon Club的账号，也可以换成-a google来使用Google账号登陆  
--u是用户 -p是密码 “地址” -st 10是范围（越大刷新越慢）-i忽略（可以输入名字或者编号） -o是只显示列表（输入例子-i 13,36,weedle,等）   -ar是自动刷新浏览器（单位秒）-ds是显示补给点 -dg是显示道馆 -H 是HOST IP地址外网用0.0.0.0即可，也可以针对域名绑定，例如wiki.wa2.info
--P是端口绑定好域名即可多个80 -L是本地语言，现在有四个语言可以在LOCALE文件夹里面找 -c是坐标转换中国 -m是mock数据 -d是debug模式
-
-
+#高级命令详细解释
+* python example.py是开启程序
+* -a是登陆方式 这里采用的-a ptc是Pokemon Club的账号，也可以换成-a google来使用Google账号登陆
+* -u是用户名 
+* -p是密码
+* 括号里面 "填写地址" 例如："Calgary, AB" ，也可以填写经度和纬度 "51.0486, 114.0708"
+* -st 10是范围（越大刷新越慢）
+* -i忽略小精灵（可以输入名字或者编号） 例如：-i 13,36,weedle,等
+* -o是只显示哪些小精灵
+* -ar是自动刷新浏览器（单位秒）
+* -ds是显示补给点 
+* -dg是显示道馆 
+* -H 是HOST IP地址外网用0.0.0.0即可，也可以针对域名绑定，例如wiki.wa2.info
+* -P是端口号默认是localhost:5000的这个5000可以在不更改example.py里面在这里设置参数。-H绑定好域名还可以多个80端口
+* -L是本地语言，现在有四个语言可以输入-L zh_cn切换中文输入-L en切换英文也可以在example.py设置
+* -c是坐标转换中国
+* -m是mock数据
+* -d是debug模式
 
 
 
