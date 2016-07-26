@@ -14,7 +14,7 @@ In other words, all column data should depend on full primary key and not part.
     1. Duplicate data
     2. None-uniform data
 
-3. No columns in a table should depend on other columns.  
-    For Example:  
-    * Average for a student's mark can be calculated and should not be included in the database, thus it is redundant.
+##3. No columns in a table should depend on other columns.  
+For Example:  
+* Average for a student's mark can be calculated and should not be included in the database, thus it is redundant.
 
