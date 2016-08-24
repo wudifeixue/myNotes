@@ -1,16 +1,23 @@
-###2016July11  
+###2016 August 24
+Find out how to reset SQL Server database Id  
+```sql
+DBCC CHECKIDENT ('[TestTable]', RESEED, 0);
+GO
+```
+
+###2016 July 11  
 Think about SQL Query and Object-relational mapping (ORM)  
 Windows Schedule Tasks run batch file need further investigation, appeareantly if just run .bat file it might run with a notepad.
 
-###2016June30  
+###2016 June 30  
 when net user in CMD does not work, **netplwiz** is a pretty good alternative  
 discovered that Windows10 Privacy terms are disgusting https://privacy.microsoft.com/en-us/privacystatement/  
 starts to write goals and things to keep in mind everyday  
 
-###2016May20  
+###2016 May 20  
 Database normalization - minimize data redundancy, refactor the database to increase efficiency  
 
-####2016May10  
+####2016 May 10  
 Pragmatic Programmer - 程序要每天多练多学习，不停的积累才能进步  
 记住了关于UX开发的关键 “Don't Make Me Think”  
 继续学习OOP http://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concep  
