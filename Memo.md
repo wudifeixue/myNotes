@@ -17,7 +17,7 @@ starts to write goals and things to keep in mind everyday
 ###2016 May 20  
 Database normalization - minimize data redundancy, refactor the database to increase efficiency  
 
-####2016 May 10  
+###2016 May 10  
 Pragmatic Programmer - 程序要每天多练多学习，不停的积累才能进步  
 记住了关于UX开发的关键 “Don't Make Me Think”  
 继续学习OOP http://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concep  
