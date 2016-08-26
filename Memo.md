@@ -1,3 +1,8 @@
+###2016 August 26
+Love Markdown now more than ever! Saves so much time and now only types meaningful things and never feel boring to adjust little things that purely waste time again.
+Find out an online Markdown to HTML editor that is pretty convenient for quick HTML.
+http://dillinger.io/
+
 ###2016 August 24
 Find out how to reset SQL Server database Id  
 ```sql
