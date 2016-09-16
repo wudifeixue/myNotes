@@ -1,3 +1,12 @@
+###2016 September 16
+Responsive images with user experience imrpoved by showing detail image if screen size is less than 500px.  
+```HTML
+	<picture>
+		<source srcset="./images/skyline_cropped.jpg" media="(max-width: 500px)">
+		<img src="./images/skyline_compressed.jpg">
+	</picture>
+	<img src="./images/skyline_compressed.jpg">
+```
 ###2016 August 26
 Love Markdown now more than ever! Saves so much time and now only types meaningful things and never feel boring to adjust little things that purely waste time again.  
 Find out an online Markdown to HTML editor that is pretty convenient for quick HTML.  
