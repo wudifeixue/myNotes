@@ -1,3 +1,21 @@
+###2016 Semptember 23
+First install [Pdftk](http://www.pdflabs.com/docs/install-pdftk/)  
+1. Download Pdftk and extract **pdftk.exe** and **libiconv2.dll** to **%windir%\System32**, a directory in the path or any other location of your choice.  
+2. Download and install Notepad++.  
+3. PDF streams are usually compressed using the DEFLATE algorithm. This saves space, but it makes the PDF's source illegible.  
+```pdftk original.pdf output uncompressed.pdf uncompress```  
+4. Open **uncompressed.pdf** with Notepad++ to reveal the structure of the watermark.
+
+```
+Error: Failed to open PDF file:
+   101.pdf
+   OWNER PASSWORD REQUIRED, but not given (or incorrect)
+```
+To decrypt password in the PDF file  
+```
+qpdf –password="" –decrypt original.pdf nopassword.pdf
+```
+
 ###2016 September 16
 Responsive images with user experience imrpoved by showing detail image if screen size is less than 500px.  
 ```HTML
