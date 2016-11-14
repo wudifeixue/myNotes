@@ -1,4 +1,16 @@
+###2016 November 14
+####SQL Server Database Stuff  
+Transfer data from UUID to Integer ID  
+First create a column for the old table that is Integer and Identity so it is increamental.  
+Then  
+SELECT  
+b.[IntegerID] AS [UUIDsColumn]  
+FROM [TABLE] a  
+LEFT JOIN [TABLE] b ON a.[UUID] = b.[UUID]  
+Well that was pseudo code but I guess it can help me remember what I did today.  
+
 ###2016 Semptember 23
+####How to remove PDF watermark
 First install [Pdftk](http://www.pdflabs.com/docs/install-pdftk/)  
 1. Download Pdftk and extract **pdftk.exe** and **libiconv2.dll** to **%windir%\System32**, a directory in the path or any other location of your choice.  
 2. Download and install Notepad++.  
