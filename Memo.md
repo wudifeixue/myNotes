@@ -1,3 +1,22 @@
+###2016 November 25
+####SQL Server Reduce Log File to reduce backup size
+```SQL
+USE [DatabaseName];
+GO
+-- Truncate the log by changing the database recovery model to SIMPLE.
+ALTER DATABASE [DatabaseName]
+SET RECOVERY SIMPLE;
+GO
+-- Shrink the truncated log file to 1 MB.
+DBCC SHRINKFILE ([DatabaseName]_Log, 1);
+GO
+-- Reset the database recovery model.
+ALTER DATABASE [DatabaseName]
+SET RECOVERY FULL;
+GO
+```
+
+
 ###2016 November 14
 ####SQL Server Database Stuff  
 Transfer data from UUID to Integer ID  
