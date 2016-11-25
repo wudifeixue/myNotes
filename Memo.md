@@ -1,4 +1,39 @@
 ###2016 November 25
+Generic answer for future developers.
+
+SQL Server  
+```SQL
+UPDATE 
+     t1
+SET 
+     t1.column = t2.column
+FROM 
+     Table1 t1 
+     INNER JOIN Table2 t2 
+     ON t1.id = t2.id;
+```
+Oracle (and SQL Server)  
+```SQL
+UPDATE 
+     t1
+SET 
+     t1.colmun = t2.column 
+FROM 
+     Table1 t1, 
+     Table2 t2 
+WHERE 
+     t1.ID = t2.ID;
+```
+MySQL  
+```SQL
+UPDATE 
+     Table1 t1, 
+     Table2 t2
+SET 
+     t1.column = t2.column 
+WHERE
+     t1.ID = t2.ID;
+```
 ####SQL Server Reduce Log File to reduce backup size
 ```SQL
 USE [DatabaseName];
@@ -15,8 +50,6 @@ ALTER DATABASE [DatabaseName]
 SET RECOVERY FULL;
 GO
 ```
-
-
 ###2016 November 14
 ####SQL Server Database Stuff  
 Transfer data from UUID to Integer ID  
