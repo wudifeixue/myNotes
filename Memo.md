@@ -1,3 +1,13 @@
+###2016 December 5  
+SQL Server Update PostalCode to Uppercase  
+
+```SQL
+  UPDATE [Table]
+  SET PostalCode = UPPER(PostalCode)
+  WHERE  PostalCode != UPPER(PostalCode)
+COLLATE Latin1_General_CS_AS
+```
+
 ###2016 November 25
 Generic answer for future developers.
 
