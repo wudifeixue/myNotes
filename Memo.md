@@ -75,11 +75,13 @@ GO
 ####SQL Server Database Stuff  
 Transfer data from UUID to Integer ID  
 First create a column for the old table that is Integer and Identity so it is increamental.  
-Then  
+Then
+```SQL
 SELECT  
-b.[IntegerID] AS [UUIDsColumn]  
-FROM [TABLE] a  
-LEFT JOIN [TABLE] b ON a.[UUID] = b.[UUID]  
+b.[IntegerID] AS [UUIDsColumn]
+FROM [TABLE] tableA
+LEFT JOIN [TABLE] tableB ON tableA.[UUID] = tableB.[UUID]
+```
 Well that was pseudo code but I guess it can help me remember what I did today.  
 
 ###2016 Semptember 23
