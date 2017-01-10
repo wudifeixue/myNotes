@@ -8,6 +8,41 @@ TABLESAMPLE (100 ROWS)
 WHERE Condition like '%filter%'
 ```
 
+To transfer data from UUID(or GUID) table to IntegerID table, and keep the relationship between data was the requirement.  
+As I learn more, I find ways to improve past code from 2016 November 14.  
+Now to elaborate more on that topic, I wrote a newer psudocode for generic example.  
+```SQL
+GO
+ALTER TABLE [OldDatabase].[OldSchema].[OldTable]
+ADD [IntegerId] INT IDENTITY
+```
+First I would add an incremental integer ID to each old database table.    
+Then:  
+```SQL
+SET IDENTITY_INSERT [NewDatabase].[NewSchema].[NewTable] ON 
+-- Since new table was designed with conventional practice, its primary key is identity
+-- Therefore to keep the data the same, I will wipe out the new destination database as I transfer the data
+-- If current data in the destination database need to be kept, I would have used a different approach.
+INSERT INTO [NewDatabase].[NewSchema].[NewTable]
+	([PrimaryKeyId]
+	,[OtherTableIntegerId]
+	,[SomeDetails]
+	,[IntType]
+	)
+SELECT
+	tableA.[IntegerId] AS [PrimaryKeyId]
+	,tableB.[IntegerId] AS [OtherTableItegerId]
+	,[SomeDetails]
+	,CASE
+	  WHEN tableA.[BooleanType] = 'True' THEN 1
+	  WHEN tableA.[BooleanType] = 'False' THEN 2
+	 END
+FROM [TABLE] tableA
+LEFT JOIN [TABLE] tableB ON tableA.[UUID] = tableB.[UUID]
+GO
+SET IDENTITY_INSERT [NewDatabase].[NewSchema].[NewTable] OFF
+```
+
 ###2016 December 5  
 SQL Server Update PostalCode to Uppercase  
 
