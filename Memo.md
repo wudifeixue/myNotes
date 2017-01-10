@@ -1,3 +1,13 @@
+##2017 January 10
+SQL Server Select random samples from a large amount of data
+```SQL
+USE [Database]
+SELECT *
+FROM [Schema].[Table]
+TABLESAMPLE (100 ROWS)
+WHERE isActive = 1
+```
+
 ###2016 December 5  
 SQL Server Update PostalCode to Uppercase  
 
