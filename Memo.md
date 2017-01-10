@@ -5,14 +5,15 @@ USE [Database]
 SELECT *
 FROM [Schema].[Table]
 TABLESAMPLE (100 ROWS)
-WHERE isActive = 1
+WHERE Condition like '%filter%'
 ```
 
 ###2016 December 5  
 SQL Server Update PostalCode to Uppercase  
 
 ```SQL
-  UPDATE [Table]
+USE [Database]
+  UPDATE [Schema].[Table]
   SET PostalCode = UPPER(PostalCode)
   WHERE  PostalCode != UPPER(PostalCode)
 COLLATE Latin1_General_CS_AS
@@ -56,17 +57,17 @@ WHERE
 ```
 ####SQL Server Reduce Log File to reduce backup size
 ```SQL
-USE [DatabaseName];
+USE [Database];
 GO
 -- Truncate the log by changing the database recovery model to SIMPLE.
-ALTER DATABASE [DatabaseName]
+ALTER DATABASE [Database]
 SET RECOVERY SIMPLE;
 GO
 -- Shrink the truncated log file to 1 MB.
-DBCC SHRINKFILE ([DatabaseName]_Log, 1);
+DBCC SHRINKFILE ([Database]_Log, 1);
 GO
 -- Reset the database recovery model.
-ALTER DATABASE [DatabaseName]
+ALTER DATABASE [Database]
 SET RECOVERY FULL;
 GO
 ```
@@ -127,13 +128,13 @@ http://dillinger.io/
 Find out how to reset SQL Server database Id and content
 ```sql
 TRUNCATE TABLE   
-[Database].[SCHEMA_dboForExample].[TestTable]
+[Database].[Schema].[Table]
 ```
   
 ###2016 August 24
 Find out how to reset SQL Server database Id  
 ```sql
-DBCC CHECKIDENT ('[TestTable]', RESEED, 0);
+DBCC CHECKIDENT ('[Table]', RESEED, 0);
 GO
 ```
   
