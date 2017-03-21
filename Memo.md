@@ -1,4 +1,4 @@
-##2017 January 10
+## 2017 January 10
 SQL Server Select random samples from a large amount of data
 ```SQL
 USE [Database]
@@ -43,7 +43,7 @@ GO
 SET IDENTITY_INSERT [NewDatabase].[NewSchema].[NewTable] OFF
 ```
 
-###2016 December 5  
+### 2016 December 5  
 SQL Server Update PostalCode to Uppercase  
 
 ```SQL
@@ -54,7 +54,7 @@ USE [Database]
 COLLATE Latin1_General_CS_AS
 ```
 
-###2016 November 25
+### 2016 November 25
 Generic answer for future developers.
 
 SQL Server  
@@ -90,7 +90,7 @@ SET
 WHERE
      t1.ID = t2.ID;
 ```
-####SQL Server Reduce Log File to reduce backup size
+#### SQL Server Reduce Log File to reduce backup size
 ```SQL
 USE [Database];
 GO
@@ -106,8 +106,8 @@ ALTER DATABASE [Database]
 SET RECOVERY FULL;
 GO
 ```
-###2016 November 14
-####SQL Server Database Stuff  
+### 2016 November 14
+#### SQL Server Database Stuff  
 Transfer data from UUID to Integer ID  
 First create a column for the old table that is Integer and Identity so it is increamental.  
 Then
@@ -119,8 +119,8 @@ LEFT JOIN [TABLE] tableB ON tableA.[UUID] = tableB.[UUID]
 ```
 Well that was pseudo code but I guess it can help me remember what I did today.  
 
-###2016 Semptember 23
-####How to remove PDF watermark
+### 2016 Semptember 23
+#### How to remove PDF watermark
 First install [Pdftk](http://www.pdflabs.com/docs/install-pdftk/)  
 1. Download Pdftk and extract **pdftk.exe** and **libiconv2.dll** to **%windir%\System32**, a directory in the path or any other location of your choice.  
 2. Download and install Notepad++.  
@@ -149,7 +149,7 @@ pdftk uncompressed.pdf output nowatermark.pdf compress
 ```
 Now enjoy the nowatermark.pdf and the file will be half the size.  
 
-###2016 September 16
+### 2016 September 16
 Responsive images with user experience imrpoved by showing detail image if screen size is less than 500px.  
 ```HTML
 	<picture>
@@ -158,7 +158,7 @@ Responsive images with user experience imrpoved by showing detail image if scree
 	</picture>
 	<img src="./images/skyline_compressed.jpg">
 ```
-###2016 August 26
+### 2016 August 26
 Love Markdown now more than ever! Saves so much time and now only types meaningful things and never feel boring to adjust little things that purely waste time again.  
 Find out an online Markdown to HTML editor that is pretty convenient for quick HTML.  
 http://dillinger.io/  
@@ -168,26 +168,26 @@ TRUNCATE TABLE
 [Database].[Schema].[Table]
 ```
   
-###2016 August 24
+### 2016 August 24
 Find out how to reset SQL Server database Id  
 ```sql
 DBCC CHECKIDENT ('[Table]', RESEED, 0);
 GO
 ```
   
-###2016 July 11  
+### 2016 July 11  
 Think about SQL Query and Object-relational mapping (ORM)  
 Windows Schedule Tasks run batch file need further investigation, appeareantly if just run .bat file it might run with a notepad.
 
-###2016 June 30  
+### 2016 June 30  
 when net user in CMD does not work, **netplwiz** is a pretty good alternative  
 discovered that Windows10 Privacy terms are disgusting https://privacy.microsoft.com/en-us/privacystatement/  
 starts to write goals and things to keep in mind everyday  
 
-###2016 May 20  
+### 2016 May 20  
 Database normalization - minimize data redundancy, refactor the database to increase efficiency  
 
-###2016 May 10  
+### 2016 May 10  
 Pragmatic Programmer - 程序要每天多练多学习，不停的积累才能进步  
 记住了关于UX开发的关键 “Don't Make Me Think”  
 继续学习OOP http://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concep  
