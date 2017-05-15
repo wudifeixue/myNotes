@@ -1,3 +1,7 @@
+## 2017 May 15
+XSD file to CSharp classes  
+```"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\xsd.exe" /classes /language:CS your.xsd```
+
 ## 2017 January 10
 SQL Server Select random samples from a large amount of data
 ```SQL
