@@ -1,3 +1,21 @@
+## 2017 May 25
+### Add a year to current Time in JavaScript
+```JS
+var result = new Date;
+result.setFullYear(result.getFullYear() + 1);
+console.log(result);
+```
+### Store cookie in browser with Name, Value, expire date and path
+```JS
+var currentTimeCookie = "Name=Value;expires=" + new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toUTCString() + ";path=/";
+document.cookie = currentTimeCookie;
+```
+### localStorage and sessionStorage
+```JS
+localStorage.setItem('key', 'value')
+sessionStorage.setItem('key', 'value')
+```
+
 ## 2017 May 15
 XSD file to CSharp classes  
 ```"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\xsd.exe" /classes /language:CS your.xsd```
