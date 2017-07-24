@@ -1,3 +1,11 @@
+## 2017 July 24
+### Libraries to Modify Excel files for C# without having to install Office
+After about one hour of research. EPPlus and NPoi seems like the only viable choices on 2017. And from various sources [#1](https://stackoverflow.com/questions/151005/create-excel-xls-and-xlsx-file-from-c-sharp) [#2](https://stackoverflow.com/questions/30573073/what-is-the-common-knowledge-about-npoi-epplus-and-koogra-as-of-2015) [#3](https://www.reddit.com/r/dotnet/comments/1s8c1k/best_xls_readingwriting_library/) and the [Chinese one](http://blog.csdn.net/zr_wb/article/details/53580671) EPPlus seems to be better.  
+Also I recall Telerik has something called [RadSpreadProcessing](http://www.telerik.com/blogs/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-i) that worth checking out later on.  
+
+Also note that [Apache Poi](https://poi.apache.org/) seems like the most viable one for Java.  
+And [xlsx](https://www.npmjs.com/package/xlsx) seems to be most popular in npm for JavaScript. 
+
 ## 2017 May 25
 ### Add a year to current Time in JavaScript
 ```JS
