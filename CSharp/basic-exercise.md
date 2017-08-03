@@ -60,3 +60,32 @@ namespace Exercise
     }
 }
 ```
+---
+## Exercise 3: Write C# code to declare two integer variables, one float variable, and one string variable and assign 10, 12.5, and "C# programming" to them respectively. Then display their values on the screen.
+
+### Solution:
+```C#
+using System;
+
+namespace Exercise
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // declare variables and assign them
+            int Integer;
+            float floatNumber;
+            string str;
+
+            Integer = 10;
+            floatNumber = 12.5f;
+            str = "C # programming";
+
+            // print the message with a 
+            Console.WriteLine("Integer: {0}, float: {1}, string: {2}", Integer, floatNumber, str);
+            // Integer: 10, float: 12.5, string: C # programming
+        }
+    }
+}
+```
