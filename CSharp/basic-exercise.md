@@ -7,7 +7,7 @@ Please feel free to comment, open an issue or pull request to the solutions I pr
 ---
 ## Exercise 1: Write C# code to declare a variable to store the age of a person. Then the output of the program is as an example shown below:
 You are 20 years old.  
-### Solution:
+### Solution 1:
 ```C#
 using System;
 
@@ -34,7 +34,7 @@ namespace Exercise
 *****
 *****
 ```
-### Solution:
+### Solution 2:
 ```C#
 using System;
 
@@ -63,7 +63,7 @@ namespace Exercise
 ---
 ## Exercise 3: Write C# code to declare two integer variables, one float variable, and one string variable and assign 10, 12.5, and "C# programming" to them respectively. Then display their values on the screen.
 
-### Solution:
+### Solution 3:
 ```C#
 using System;
 
@@ -88,4 +88,31 @@ namespace Exercise
         }
     }
 }
+```
+---
+## Exercise 4: Write C# code to prompt a user to input his/her name and then the output will be shown as an example below:
+Hello John!  
+### Solution 4:
+```C#
+using System;
+
+namespace Exercise
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Please enter your name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Hello " + name + "!");
+        }
+    }
+}
+/*
+This code example produces the following results:
+
+Please enter your name: Curtis
+Hello Curtis!
+
+*/
 ```
