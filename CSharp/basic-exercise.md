@@ -18,8 +18,44 @@ namespace Exercise
         static void Main(string[] args)
         {
             int age = 20;
-
+            // uses string interpolations in C# 6 to WriteLine since it is easier to type.
             Console.WriteLine($"You are {age} years old.");
+            // You are 20 years old.
+        }
+    }
+}
+```
+---
+## Exercise 2: Write C# code to display the asterisk pattern as shown below:
+```
+*****
+*****
+*****
+*****
+*****
+```
+### Solution:
+```C#
+using System;
+
+namespace Exercise
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // declare constant variables to make nested for loop easier to read
+            const int ROWS = 5;
+            const int COLUMNS = 5;
+            // for each row print number of * on the line with Write, then WriteLine to skip line
+            for (int i = 0; i < ROWS; i++)
+            {
+                for (int j = 0; j < COLUMNS; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine("");
+            }
         }
     }
 }
