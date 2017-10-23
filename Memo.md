@@ -1,3 +1,10 @@
+## 2017 October 23
+### Delete all local git branches except current one
+```bash
+git branch | grep -v "dev" | xargs git branch -D
+```
+This would delete all current branches that was already pushed to GitHub and keep the "dev" branch.
+
 ## 2017 September 20
 ### How to do a speedtest on Ubuntu terminal
 ```bash
