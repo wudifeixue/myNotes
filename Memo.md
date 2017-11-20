@@ -1,3 +1,28 @@
+## 2017 November 20
+### Order in SQL Server with something special
+Usually order by inside SQL Server will have an option of ASC or DESC.  
+Say for a list of item you have.  
+`1, 0, Premium, 5, 3, 4, 2`.  
+
+Generally ording inside the database will go with Number first and then Premium last.  
+`0, 1, 2, 3, 4, 5, Premium`.  
+
+However, if we want the premium to be the first displayed, and 2 to be behind 4. And this can get a little tricky.  
+In SQL Server, we can use something called `CASE`, `WHEN` and `THEN` to do this.  
+
+In practice it is fairly simple.
+```SQL
+ORDER BY 
+CASE 
+  WHEN name LIKE 'Premium' THEN 0
+  WHEN name = 2 THEN 5
+  ELSE name
+END
+ASC
+```
+Result will be: `Premium, 0, 1, 3, 4, 2, 5`.
+
+
 ## 2017 October 23
 ### Delete all local git branches except current one
 ```bash
