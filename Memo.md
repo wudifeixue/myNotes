@@ -1,3 +1,25 @@
+## 2017 December 18
+### Pass in array for SQL Server
+It is rather difficult to SELECT something in SQL Server with multiple WHERE statement.  
+Normally I would go for
+```SQL
+SELECT *
+  FROM [Database].[dbo].[Table]
+  WHERE [FirstColumn] = 'Aoba'
+  or [FirstColumn] = 'Chiya'
+```
+To get a quick search.
+
+Then there is this requirement I need to do that for 1000 times.  
+I search up and found that you can do this instead:  
+```SQL
+SELECT *
+  FROM [Database].[dbo].[Table]
+  WHERE [FirstColumn] in ('Aoba', 'Chiya')
+```
+
+
+
 ## 2017 November 20
 ### Order in SQL Server with something special
 Usually order by inside SQL Server will have an option of ASC or DESC.  
