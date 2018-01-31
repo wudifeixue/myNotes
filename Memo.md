@@ -1,3 +1,13 @@
+## 2018 January 31
+### Change phone number formats in SQL Server
+Has to change phone number formats from one to another.  
+Such as ###-###-#### to (###) ###+####  
+```SQL
+UPDATE [Database].[Schema].[Table]
+  SET PhoneNumber = '('+ SUBSTRING(PhoneNumber, 1, 3) + ') ' + SUBSTRING(PhoneNumber, 5, 12)
+```
+Could put additional filters with regex and where statements but I had pretty good data.  
+
 ## 2017 December 18
 ### Pass in array for SQL Server
 It is rather difficult to SELECT something in SQL Server with multiple WHERE statement.  
