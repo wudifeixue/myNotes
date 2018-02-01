@@ -6,7 +6,11 @@ Such as ###-###-#### to (###) ###+####
 UPDATE [Database].[Schema].[Table]
   SET PhoneNumber = '('+ SUBSTRING(PhoneNumber, 1, 3) + ') ' + SUBSTRING(PhoneNumber, 5, 12)
 ```
-Could put additional filters with regex and where statements but I had pretty good data.  
+Could put additional filters such as 
+```sql 
+WHERE PhoneNumber like '[0-9][0-9][0-9]% and PhoneNumber not like %(%
+``` 
+with regular expression and wild card in where statement but I had pretty good data.  
 
 ## 2017 December 18
 ### Pass in array for SQL Server
