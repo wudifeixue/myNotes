@@ -8,7 +8,7 @@ UPDATE [Database].[Schema].[Table]
 ```
 Could put additional filters such as 
 ```sql 
-WHERE PhoneNumber like '[0-9][0-9][0-9]% and PhoneNumber not like %(%
+WHERE PhoneNumber like '[0-9][0-9][0-9]% and PhoneNumber not like '%(%'
 ``` 
 with regular expression and wild card in where statement but I had pretty good data.  
 
