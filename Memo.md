@@ -1,3 +1,12 @@
+## 2018 May 02
+### Export Microsoft Access data to SQL Server
+If you have perfect data, I mean literally perfect that date is date and number is number only, no need to truncate and no need to fill required data, then you can use Microsoft's import tool that is for Access. It might work.  
+
+Otherwise, we will have to work our way around.  
+
+It seems like after a ton of struggle, the easiest thing to do is export the specific data table from Access to Excel 97. This way all the extra fancy features of Excel will go away and then we can use SQL Server import tool to get the data. 
+
+
 ## 2018 January 31
 ### Change phone number formats in SQL Server
 Has to change phone number formats from one to another.  
