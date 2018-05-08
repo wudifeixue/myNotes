@@ -1,3 +1,22 @@
+## 2018 May 08
+### Select Partial Data from Column in SQL Server
+So I have a bounch of emails are stored in this format: 
+`hello@email.com#mailto:hello@email.com#`
+And obviously it is not a great format, with a quick `LEFT` I could change the selection much cleaner.  
+```sql
+SELECT [Emails]
+	  ,LEFT([Emails], CHARINDEX('#mailto',[Emails]) -1) AS CleanEmails
+  FROM [Database].[dbo].[Table]
+  WHERE emails like '%#mailto%'
+```
+And you could put anything other than `#mailto` to maybe `,` for seperating data, then we can just update the entire thing easily since the SELECT result looks pretty good.  
+Then we just update the table so the emails are not so messy anymore.  
+```sql
+UPDATE [Database].[dbo].[Table]
+SET [Emails] = LEFT([Emails], CHARINDEX('#mailto',[Emails]) -1)
+WHERE emails like '%#mailto%'
+```
+
 ## 2018 May 02
 ### Export Microsoft Access data to SQL Server
 If you have perfect data, I mean literally perfect that date is date and number is number only, no need to truncate and no need to fill required data, then you can use Microsoft's import tool that is for Access. It might work.  
