@@ -1,3 +1,10 @@
+## 2018 June 1
+### Stop and Remove all Docker containers
+```bash
+sudo docker stop $(sudo docker ps -a -q)
+sudo docker rm $(sudo docker ps -a -q)
+```
+
 ## 2018 May 08
 ### Select Partial Data from Column in SQL Server
 So I have a bounch of emails are stored in this format: 
