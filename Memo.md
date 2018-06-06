@@ -1,3 +1,13 @@
+## 2018 June 6
+### Find out duplicate of a column in SQL Server
+```sql
+SELECT ColumnName,
+COUNT(ColumnName)
+FROM [Database].[dbo].[ColumnName]
+GROUP BY ColumnName
+HAVING COUNT(ColumnName) > 1
+```
+
 ## 2018 June 1
 ### Stop and Remove all Docker containers
 ```bash
