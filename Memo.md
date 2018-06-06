@@ -8,6 +8,16 @@ GROUP BY ColumnName
 HAVING COUNT(ColumnName) > 1
 ```
 
+### Populate existing column with identity like ID in SQL Server
+```sql
+USE [Database]
+SET @tempId = 5555 --This is because the column has some ID already, but some are still null, starts at the largest ID
+UPDATE [dbo].[Table]
+SET @tempId = Id = @tempId + 1
+WHERE Id IS NULL
+```
+
+
 ## 2018 June 1
 ### Stop and Remove all Docker containers
 ```bash
