@@ -1,3 +1,22 @@
+## 2019 Feb 06
+### Protective way to update one table from another database in SQL Server
+```sql
+BEGIN TRANSACTION
+
+UPDATE targetTable
+SET [Column] = sourceTable.[Column]
+FROM [Database].[dbo].[Table] targetTable
+JOIN [OtherDB].[dbo].[Table] sourceTable
+ON targetTable.ID = sourceTable.ID
+
+-- extra check to see if update is correct
+SELECT * FROM [Database].[dbo].[Table]
+ROLLBACK
+
+-- once things are correct, comment out BEGIN TRANSACTION and ROLLBACK to excute the real update
+```
+
+
 ## 2018 June 6
 ### Find out duplicate of a column in SQL Server
 ```sql
