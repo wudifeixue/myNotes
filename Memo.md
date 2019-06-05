@@ -1,3 +1,22 @@
+## 2019 June 04
+### Something in C#
+
+```c#
+var childClassCounts = children.Select(child => child.ClientClasses
+.Where(clientClass => clientClass.ClientClassStateId == 6 || clientClass.ClientClassStateId == 5).Count());
+var totalChildClasses = childClassCounts.Sum();  //[2, 1, 1] (4)
+
+IList<int> hello;
+
+List<object> hello1 = new List<object> { "1", 2, 's', true, 1.11111 };
+
+IList<object> hello2 = hello1;
+
+IEnumerable<object> test = hello1;
+
+IQueryable<object> something = test.AsQueryable();
+```
+
 ## 2019 Feb 06
 ### Protective way to update one table from another database in SQL Server
 ```sql
