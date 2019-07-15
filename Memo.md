@@ -1,3 +1,15 @@
+## 2019 July 15
+Download with youtube-dl  
+`youtube-dl https://www.youtube.com/watch?v=o0Er8yGxViU --hls-prefer-native`
+
+How to download YouTube videos with best quality keep the pre merge files and download a playlist  
+`youtube-dl -i -f bestvideo+bestaudio/best -k --yes-playlist 'https://www.youtube.com/watch?v=dsaLD_2C4Gg&list=PLTUPXbT5Ni8zaWU53t_eSZTzxJK3qMzfA'`
+
+How to download m3u8  
+`ffmpeg -i https://cdn.mobcrush.com/u/video/5d08ddf959ac9f3661895cd0/5d08ddf959ac9f3661895cd0_3000000_event.m3u8 -c copy -bsf:a aac_adtstoasc hihg.mp4
+`
+
+
 ## 2019 June 25
 ### Hacker ethic
 (1) 使用计算机以及所有有助于了解这个世界本质的事物都不应受到任何限制。任何事情都应该亲手尝试。  
