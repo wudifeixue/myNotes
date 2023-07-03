@@ -1,3 +1,8 @@
+## 2023 July 2
+Edit video with ffmpeg
+```bash
+ffmpeg -ss 00:00:00 -to 00:01:08 -i /Users/nihaosaoa/Downloads/fanshi.mp4  -c copy output.mp4
+```
 ## 2019 July 15
 Download with youtube-dl  
 `youtube-dl https://www.youtube.com/watch?v=o0Er8yGxViU --hls-prefer-native`
